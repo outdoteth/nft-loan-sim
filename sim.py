@@ -1,4 +1,3 @@
-# set a constant loan amount
 from cmath import sqrt
 from random import randrange
 from numpy import random
@@ -32,15 +31,5 @@ def main():
     df.to_csv("./expected_return.csv")
 
 
-
-# for:
-# pick a random coupoun payment (x)
-# sample a random variable price from normal distribution of sigma, mean
-# get the payoff min(coupoun+loan, price) (y)
-# totals[x] += y
-# counts[x] += 1
-# for each total:
-#   avg = total / count
-#   chart[x] = avg
 
 main()

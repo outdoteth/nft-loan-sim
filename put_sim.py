@@ -1,9 +1,7 @@
-# set a constant loan amount
 from cmath import sqrt
 from random import randrange
 from numpy import random
 import pandas as pd
-
 
 def main():
     totals = {}
@@ -30,7 +28,5 @@ def main():
 
     df = pd.DataFrame(chart.items(), columns=["x", "y"]).sort_values(by="x")
     df.to_csv("./put_expected_return.csv")
-
-
 
 main()

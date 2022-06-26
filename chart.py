@@ -12,7 +12,7 @@ predicted_returns = predicted_returns.sort_values(by='x')
 put_returns = put_returns.sort_values(by='x')
 
 plt.plot(returns["x"], returns["y"], label="loan simulated (300,000 runs)")
-# plt.plot(predicted_returns["x"], predicted_returns["y"], label="predicted value")
+plt.plot(predicted_returns["x"], predicted_returns["y"], label="predicted value")
 plt.plot(put_returns["x"], put_returns["y"], label="put simulated (300,000 runs)")
 
 plt.axhline(y=35, color='r', linestyle='dashed', label="spot price")
