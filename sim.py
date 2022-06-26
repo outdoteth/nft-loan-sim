@@ -7,12 +7,13 @@ import pandas as pd
 
 def main():
     totals = {}
-    loan = 31.74
+    start_price = 35
+    volatility = 10
+    loan = 30
 
-    for i in range(0, 10_000_000):
-        coupoun = randrange(-10, 200) / 10
-        start_price = 35
-        end_price = random.normal(start_price, 5)
+    for i in range(0, 300_000):
+        coupoun = (i % 200) * 0.1
+        end_price = random.normal(start_price, volatility)
         payoff = min(coupoun + loan, end_price)
 
         coupoun_key = str(coupoun)
